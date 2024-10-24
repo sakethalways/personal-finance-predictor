@@ -1,11 +1,15 @@
 from flask import Flask, request, jsonify
 import numpy as np
 import joblib
+import os
 
 app = Flask(__name__)
 
-# Load the pre-trained model
-model = joblib.load('model.pkl')
+# Load the trained model
+model_path = 'backend/model.pkl'
+if not os.path.isfile(model_path):
+    raise FileNotFoundError(f"Model file does not exist: {model_path}")
+model = joblib.load(model_path)
 
 @app.route('/predict', methods=['POST'])
 def predict():
