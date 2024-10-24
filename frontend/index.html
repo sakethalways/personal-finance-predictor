@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Finance Predictor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Personal Finance Predictor</h1>
+        <form id="finance-form">
+            <label for="income">Monthly Income:</label>
+            <input type="number" id="income" required>
+            
+            <label for="essentials">Essentials (Rent, Utilities):</label>
+            <input type="number" id="essentials" required>
+            
+            <label for="discretionary">Discretionary (Entertainment, Dining):</label>
+            <input type="number" id="discretionary" required>
+            
+            <label for="savings">Current Savings:</label>
+            <input type="number" id="savings" required>
+            
+            <button type="submit">Predict</button>
+        </form>
+        <div id="prediction-result"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
